@@ -1,11 +1,18 @@
 Aihe: Muistipeli
-*Muistipelissä pelaaja valitsee aluksi vaikeustason, jonka mukaan määritellään pelikentässä olevien kuvien määrä eli kentän koko (4x4, 6x6, 8x8 esim.?). Pelaaja valitsee haluamansa "väärinpäin" käännetyn kortin, ja pyrkii löytämään sille parin seuraavalla valinnallaan. Samaa kuvaa uudestaan klikkaamalla kuva ei muutu taas väärinpäin, vaan pelaajan tulee valita kaksi eri kuvaa. Kun pelaaja valitsee peräkkäin samat kuvat katoavat näkyvistä. Paras tulos (=vähiten käytettyjä arvauksia, tai sitten joku pisteydenlaskusysteemi) tallennetaan pelin jälkeen jokaiselle vaikeustasolle erikseen. Pelaaja ilmoittaa uuden parhaan tuloksen saavuttaessaan nimimerkkinsä, saa olla aiemmin käytetty tietysti.
+*Muistipelissä pelaaja valitsee aluksi vaikeustason, jonka mukaan määritellään pelikentässä olevien kuvien määrä eli kentän koko (4x4, 6x6, 8x8 esim.?).
+Pelaaja voi myös tutkia high score-listoja vaikeusasteen perusteella.
+
+Itse pelissä pelaaja valitsee haluamansa "väärinpäin" käännetyn kortin, ja pyrkii löytämään sille parin seuraavalla valinnallaan
+Samaa kuvaa uudestaan klikkaamalla kuva ei muutu taas väärinpäin, vaan pelaajan tulee valita kaksi eri kuvaa.
+Kun pelaaja valitsee peräkkäin samat kuvat katoavat näkyvistä.
+Paras tulos (=vähiten käytettyjä arvauksia, tai sitten joku pisteydenlaskusysteemi) tallennetaan pelin jälkeen jokaiselle vaikeustasolle erikseen. 
+Pelaaja ilmoittaa uuden parhaan tuloksen saavuttaessaan nimimerkkinsä, saa olla aiemmin käytetty tietysti.
 
 Käyttäjät:
 *Pelin pelaaja, parhaita tuloksia tarkistava käyttäjä
 
 Kaikkien käyttäjien toiminnot:
-*Uuden pelin käynnistys
+*Uuden pelin käynnistys valitsemalla vaikeusaste
 *Parhaiden tuloksien selaus vaikeusasteen perusteella
-*Parhaiden pisteiden selaus nimimerkin perusteella
+*Parhaiden pisteiden selaus nimimerkin perusteella (ehkä?)
 *Pelin lopetus
