@@ -4,16 +4,20 @@
  */
 package muistipeli;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author markolai
  */
-public class Muistipeli {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma();
+        kayttoliittyma.setVisible(true);
+
     }
 }
