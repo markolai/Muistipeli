@@ -58,6 +58,21 @@ public class Logiikka {
     public static boolean onkoKorttiaValittuna() {
         return onkoKorttiaValittuna;
     }
+    
+        /**
+     * Tarkastetaan onko peli käynnissä tutkimalla onko pelilaudalla kääntämättömiä kortteja.
+     */
+    
+    public static boolean onkoPeliKaynnissa(Kuva[] kuvat) {
+        
+        for (Kuva kuva : kuvat) {
+            
+            if (!kuva.loydetty()) {
+                return false;
+            }
+        } return true;
+        
+    }
 
     public static void valitseKortti() {
         onkoKorttiaValittuna = true;
