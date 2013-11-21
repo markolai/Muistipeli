@@ -21,8 +21,15 @@ public class Tekstikayttoliittyma {
 
         lukija = new Scanner(System.in);
         aloitus();
+        pelaa();
     }
 
+    
+    /**
+ *
+ * Aloitetaan peli valitsemalla vaikeusaste.
+ *
+ */
     private void aloitus() {
 
         System.out.println("Muistipeli.");
@@ -37,7 +44,18 @@ public class Tekstikayttoliittyma {
         
         pelilauta = new Pelilauta(vaikeusaste);
         
+    }
+    
+    
         
+    /**
+ *
+ * Käynnistetään varsinainen pelisessio.
+ *
+ */
+    private void pelaa() {
 
+
+        
     }
 }
