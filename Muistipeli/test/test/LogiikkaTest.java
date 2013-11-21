@@ -5,7 +5,7 @@ package test;
  * and open the template in the editor.
  */
 
-import Logiikka.Kortti;
+import Logiikka.Kuva;
 import Logiikka.Logiikka;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -60,8 +60,8 @@ public class LogiikkaTest {
     @Test
     public void ovatkoKortitPariToimii() {
 
-        Kortti korttiA = new Kortti(1);
-        Kortti korttiB = new Kortti(2);
+        Kuva korttiA = new Kuva(1);
+        Kuva korttiB = new Kuva(2);
         assertEquals(false, logiikka.ovatkoKortitPari(korttiA, korttiB));
 
     }
@@ -69,8 +69,8 @@ public class LogiikkaTest {
     @Test
     public void ovatkoKortitPariToimii2() {
 
-        Kortti korttiA = new Kortti(1);
-        Kortti korttiB = new Kortti(1);
+        Kuva korttiA = new Kuva(1);
+        Kuva korttiB = new Kuva(1);
         assertEquals(true, logiikka.ovatkoKortitPari(korttiA, korttiB));
 
     }

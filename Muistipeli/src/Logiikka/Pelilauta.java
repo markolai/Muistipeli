@@ -4,7 +4,8 @@
  */
 package Logiikka;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -13,6 +14,8 @@ import java.util.Random;
 public class Pelilauta {
 
     private int vaikeuaste;
+    private ArrayList<Kuva> kuvat;
+    private Kuva[][] pelilauta;
 
     public Pelilauta(int vaikeusaste) {
 
@@ -24,7 +27,6 @@ public class Pelilauta {
             luoPelilauta(7);
         }
     }
-    //KESKEN
 
     /**
      *
@@ -32,45 +34,49 @@ public class Pelilauta {
      */
     public void luoPelilauta(int v) {
 
-        int[][] pelilauta = new int[4][v];
+        pelilauta = new Kuva[4][v];
         int k = 0;
+
+        kuvat = new ArrayList<Kuva>(4 * v);
+        luoKuvat(v);
 
         for (int i = 0; i < v; i++) {
             for (int j = 0; j < 4; j++) {
-                pelilauta[k][i] = 0;
-                j++;
+                pelilauta[i][j] = kuvat.get(k);
+                k++;
             }
 
-
         }
-        
-        luoKortit(pelilauta, v);
-        
-        tulostaPelilauta(pelilauta, v);
-        
-        
-    }
-    
-   //KESKEN
 
-    public void tulostaPelilauta(int[][] pelilauta, int v) {
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < v; j++) {
-                System.out.printf(" ", pelilauta[i][j]);
-            }
-            System.out.println();
-        }
+
+        //tulostaPelilauta(pelilauta, v);
+
+
     }
 
-    private void luoKortit(int[][] pelilauta, int v) {
-        
-        for (int i = 0; i < v/2; i++) {
-            
-            Kortti kortti = new Kortti(i);
-            
-            // sijoitetaan kortit taulukkoon ja sekoitetaan.
-            
+    /**
+     *
+     * Luodaan muistipelin kuvat, laitetaan ne listaan ja sekoitetaan.
+     */
+    private void luoKuvat(int v) {
+
+        for (int i = 0; i < v / 2; i++) {
+
+            Kuva kuva = new Kuva(i);
+            kuvat.add(kuva);
+            kuvat.add(kuva);
+
         }
-       
+
+        Collections.shuffle(kuvat);
+
     }
+//    public void tulostaPelilauta(int[][] pelilauta, int v) {
+//        for (int i = 0; i < 4; i++) {
+//            for (int j = 0; j < v; j++) {
+//                System.out.printf(" ", pelilauta[i][j]);
+//            }
+//            System.out.println();
+//        }
+//    }
 }

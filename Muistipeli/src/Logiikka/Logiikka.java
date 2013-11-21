@@ -32,7 +32,7 @@ public class Logiikka {
     public static void uusiPeli(int vaikeusaste) {
 
         if (vaikeusaste < 0 || vaikeusaste > 3) {
-            System.out.println("Vaikeusaste tulee olla väliltä 1-3.");
+            throw new IllegalArgumentException("Vaikeusaste tulee olla väliltä 1-3.");
         } else {
             Pelilauta pelilauta = new Pelilauta(vaikeusaste);
         }
@@ -70,7 +70,7 @@ public class Logiikka {
     /**
      * Palautetaan totuusarvo "ovatko kortit pari" kysyttäessä.
      */
-    public static boolean ovatkoKortitPari(Kortti a, Kortti b) {
+    public static boolean ovatkoKortitPari(Kuva a, Kuva b) {
 
         if (a.getTunniste() == b.getTunniste()) {
             return true;

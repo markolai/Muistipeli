@@ -4,7 +4,7 @@ package test;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-import Logiikka.Kortti;
+import Logiikka.Kuva;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class KorttiTest {
 
-    private Kortti kortti;
+    private Kuva kortti;
 
     public KorttiTest() {
     }
@@ -41,28 +41,28 @@ public class KorttiTest {
 
     @Test
     public void onkoKortinTunnisteOikein() {
-        Kortti korttiA = new Kortti(1);
+        Kuva korttiA = new Kuva(1);
         assertEquals(1, korttiA.getTunniste());
     }
 
     @Test
     public void onkoKorttiKaannetty() {
-        Kortti korttiA = new Kortti(1);
+        Kuva korttiA = new Kuva(1);
         assertEquals(false, korttiA.getKaannetty());
     }
 
     @Test
     public void toimiikoKortinKaantaminen() {
-        Kortti korttiA = new Kortti(1);
-        korttiA.kaannaKortti();
+        Kuva korttiA = new Kuva(1);
+        korttiA.kaannaKuva();
         assertEquals(true, korttiA.getKaannetty());
     }
     
         @Test
     public void toimiikoKortinKaantaminen2() {
-        Kortti korttiA = new Kortti(1);
-        korttiA.kaannaKortti();
-        korttiA.kaannaKortti();
+        Kuva korttiA = new Kuva(1);
+        korttiA.kaannaKuva();
+        korttiA.kaannaKuva();
         assertEquals(false, korttiA.getKaannetty());
     }
 }
